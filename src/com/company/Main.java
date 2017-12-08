@@ -26,5 +26,12 @@ public class Main {
         Game firstGame =new Game();
         // Game osztály egy példányára meghívjuk a playBarchobaWithNumbers metódust
         firstGame.playBarchobaWithNumbers();
+
+        //4
+        System.out.println("-------------------------------");
+        //példányosítás
+        Temperature firstTemperatures =new Temperature();
+        // Temperature osztály egy példányára meghívjuk a getTemperatureDataFromConsole metódust
+        firstTemperatures.getTemperatureDataFromConsole();
     }
 }
