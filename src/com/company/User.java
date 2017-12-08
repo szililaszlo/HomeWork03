@@ -2,56 +2,63 @@ package com.company;
 
 public class User {
 
-	private String firstname;
-	private String lastname;
-	private String password;
-	private int age;
+    // PasswordGenerator tipusú randomPaaword példányosítása
+    PasswordGenerator randomPassword = new PasswordGenerator();
+    //randomUser metóduának meghívása
+    String newPassword = randomPassword.generatePassword(6);
 
-	public User(){}
+    private String firstname;
+    private String lastname;
+    private String password;
+    private int age;
 
-	public User(String firstname, String lastname, String password, int age) {
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.password = password;
-		this.age = age;
-	}
+    public User() {
+    }
 
-	public User(User user){
-		this.age = user.age;
-		this.firstname = user.firstname;
-		this.lastname = user.lastname;
-		this.password = user.password;
-	}
+    public User(String firstname, String lastname, int age) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        //kikerült a paraméterek közül a password, az automatikusan generálódik
+        this.password = newPassword;
+        this.age = age;
+    }
 
-	public String getFirstname() {
-		return firstname;
-	}
+    public User(User user) {
+        this.age = user.age;
+        this.firstname = user.firstname;
+        this.lastname = user.lastname;
+        this.password = user.password;
+    }
 
-	public void setFirstname(String firstname) {
-		this.firstname = firstname;
-	}
+    public String getFirstname() {
+        return firstname;
+    }
 
-	public String getLastname() {
-		return lastname;
-	}
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
 
-	public void setLastname(String lastname) {
-		this.lastname = lastname;
-	}
+    public String getLastname() {
+        return lastname;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
 
-	public void setPassword(String password) {
-		this.password = password;
-	}
+    public String getPassword() {
+        return password;
+    }
 
-	public int getAge() {
-		return age;
-	}
+    public void setPassword(String password) {
+        this.password = password;
+    }
 
-	public void setAge(int age) {
-		this.age = age;
-	}
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }
