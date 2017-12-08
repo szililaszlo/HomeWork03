@@ -19,5 +19,12 @@ public class Main {
         System.out.println("Last name: " +firstUser.getLastname());
         System.out.println("Password: " +firstUser.getPassword());
         System.out.println("Age: " +firstUser.getAge());
+
+        //3
+        System.out.println("-------------------------------");
+        //példányosítás
+        Game firstGame =new Game();
+        // Game osztály egy példányára meghívjuk a playBarchobaWithNumbers metódust
+        firstGame.playBarchobaWithNumbers();
     }
 }
